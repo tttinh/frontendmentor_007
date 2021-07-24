@@ -13,17 +13,17 @@
 }
 
 .circle {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: 2px solid white;
-    margin: 0 0.5rem;
-    display: grid;
-    place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 0 0.5rem;
+  display: grid;
+  place-items: center;
 }
 
 .circle i {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .btn {
@@ -67,16 +67,17 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 header {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .logo {
-  width: 200px;
+  width: min(220px, 35vw);
 }
 
 section {
@@ -107,6 +108,47 @@ article a {
 }
 
 footer {
-  float: right;
+  margin-top: 5rem;
   display: flex;
+  justify-content: end;
+}
+
+@media screen and (max-width: 1000px) {
+  main {
+    text-align: center;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  article {
+    padding: 0;
+  }
+
+  footer {
+    justify-content: center;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url('images/bg-mobile.svg');
+  }
+  article h1 {
+    font-size: 1.5rem;
+  }
+  .circle {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .circle i {
+    font-size: 1rem;
+  }
 }
